@@ -21,11 +21,6 @@ h1 {
   text-align: center;
   margin-bottom: 1rem;
   color: #00254c;
-  font-family: "Helvetica Neue", sans-serif;
-}
-h1,
-.output-field {
-  font-family: "Helvetica Neue", sans-serif;
 }
 
 .form-group {
@@ -56,7 +51,7 @@ h1,
 .currency-symbol {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   color: #00254c;
 }
 
@@ -65,18 +60,22 @@ input[type="number"] {
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
-  width: 100%;
+  width: 50%;
   background-color: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 input[type="button"] {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   background-color: #00254c;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
+  width: 100%;
+  align: center;
   cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 input[type="button"]:hover {
@@ -85,7 +84,7 @@ input[type="button"]:hover {
 
 .error-message {
   color: red;
-  font-size: 14px;
+  font-size: 12px;
   margin-left: 5px;
 }
 .output-field {
@@ -102,4 +101,10 @@ button {
 }
 button:hover {
   background-color: #d32f2f;
+}
+.output-field button {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+input[type="text"] {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }

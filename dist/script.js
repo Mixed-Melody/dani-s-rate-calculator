@@ -10,7 +10,6 @@ function findNewTotal() {
   if (isNaN(oRate)) {
     document.getElementById("oRate-error").textContent =
       "Please enter a valid rate.";
-    totalInput.focus();
     return;
   } else {
     document.getElementById("oRate-error").textContent = "";
@@ -51,7 +50,6 @@ function copyToClipboard(s) {
     rateField.setSelectionRange(0, 99999);
     document.execCommand("copy");
     document.getElementById("copyR-error").textContent = "Rate copied.";
-    totalInput.focus();
   }
   if (s == "eTotal") {
     const totalField = document.getElementById("eTotal");
@@ -59,7 +57,6 @@ function copyToClipboard(s) {
     totalField.setSelectionRange(0, 99999);
     document.execCommand("copy");
     document.getElementById("copy-error").textContent = "Total copied.";
-    totalInput.focus();
   }
 }
 const copyEtotalButton = document.getElementById("copy-eTotal");

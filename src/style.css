@@ -21,6 +21,11 @@ h1 {
   text-align: center;
   margin-bottom: 1rem;
   color: #00254c;
+  font-family: "Helvetica Neue", sans-serif;
+}
+h1,
+.output-field {
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 .form-group {
@@ -41,7 +46,6 @@ h1 {
   align-items: center;
 }
 
-.currency-symbol,
 .percent-symbol {
   font-size: 1.2rem;
   font-weight: bold;
@@ -50,11 +54,10 @@ h1 {
 }
 
 .currency-symbol {
-  color: #555;
-}
-
-.percent-symbol {
-  color: #4caf50;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #00254c;
 }
 
 input[type="number"] {
@@ -85,42 +88,18 @@ input[type="button"]:hover {
   font-size: 14px;
   margin-left: 5px;
 }
-.result-container {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.output-field {
+  margin: 10px auto;
+  display: block;
+  font-family: "Helvetica Neue", sans-serif;
 }
-
-.result-container button {
-  background-color: #4caf50;
-  color: white;
+button {
+  padding: 10px 20px;
   border: none;
-  padding: 8px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin-left: 10px;
-  cursor: pointer;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: #ffffff;
 }
-
-.result-container button:hover {
-  background-color: #3e8e41;
-}
-.copy-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.copy-button:hover {
-  background-color: #0062cc;
+button:hover {
+  background-color: #d32f2f;
 }

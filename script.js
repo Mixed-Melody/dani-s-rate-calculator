@@ -60,7 +60,7 @@ copyRateButton.addEventListener("click", function () {
   copyToClipboard("rate");
 });
 
-const findButton = document.getElementById("find");
+/*const findButton = document.getElementById("find");
 findButton.addEventListener("click", function () {
   findNewTotal();
-});
+});*/

@@ -41,13 +41,6 @@ h1 {
   align-items: center;
 }
 
-.percent-symbol {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-right: 0.5rem;
-  color: #00254c;
-}
-
 .currency-symbol {
   font-size: 1.2rem;
   font-weight: bold;

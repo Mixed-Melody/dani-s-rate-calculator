@@ -1,11 +1,11 @@
 let rate;
 let totalF;
+let oRate;
 
 function findNewTotal() {
   const originalRate = document.getElementById("oRate");
-  const oRate = parseFloat(originalRate.value);
-  const exTaxInput = document.getElementById("exTax");
-  const eTax = parseFloat(exTaxInput.value) || 5.75;
+  oRate = parseFloat(originalRate.value);
+  const eTax = 5.75;
   document.getElementById("copy-error").textContent = "";
   if (isNaN(oRate)) {
     document.getElementById("oRate-error").textContent =
@@ -14,33 +14,24 @@ function findNewTotal() {
   } else {
     document.getElementById("oRate-error").textContent = "";
   }
+  totalF = oRate + (oRate * 5.75) / 100;
+  let roundedTotal = roundUp(totalF);
 
-  exTaxInput.value = eTax.toFixed(2);
-  totalF = (oRate + (oRate * eTax) / 100).toFixed(2);
-  document.getElementById("total").value = totalF;
-  document.getElementById("eTotal").value = totalF;
+  rate = (oRate * (100 + 5.75)) / (100 + 12.63);
+  let roundedRate = roundUp(rate);
+
+  document.getElementById("rate").value = roundedRate;
+  document.getElementById("eTotal").value = roundedTotal;
 }
 
-function solveForRate() {
-  const totalInput = document.getElementById("total");
-  const total = parseFloat(totalInput.value);
-  const percentInput = document.getElementById("percent-increase");
-  const percent = parseFloat(percentInput.value) || 12.63;
-  document.getElementById("copyR-error").textContent = "";
+function roundUp(value) {
+  const roundedValue = Math.floor(value * 100) / 100; // Round down to second decimal
 
-  if (isNaN(total)) {
-    document.getElementById("total-error").textContent =
-      "Please enter a valid total.";
-    totalInput.focus();
-    return;
-  } else {
-    document.getElementById("total-error").textContent = "";
+  if (value - roundedValue >= 0.005) {
+    return roundedValue + 0.01; // Round up if the difference is 0.005 or higher
   }
 
-  percentInput.value = percent.toFixed(2);
-
-  rate = (total / (1 + percent / 100)).toFixed(2);
-  document.getElementById("rate").value = rate;
+  return roundedValue;
 }
 
 function copyToClipboard(s) {
@@ -67,4 +58,9 @@ copyEtotalButton.addEventListener("click", function () {
 const copyRateButton = document.getElementById("copy-rate");
 copyRateButton.addEventListener("click", function () {
   copyToClipboard("rate");
+});
+
+const findButton = document.getElementById("find");
+findButton.addEventListener("click", function () {
+  findNewTotal();
 });

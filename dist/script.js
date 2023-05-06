@@ -25,7 +25,7 @@ function findNewTotal() {
 }
 
 function roundUp(value) {
-  const roundedValue = Math.floor(value * 100) / 100; // Round down to second decimal
+  const roundedValue = Math.round(value * 100) / 100; // Round down to second decimal
 
   if (value - roundedValue >= 0.005) {
     return roundedValue + 0.01; // Round up if the difference is 0.005 or higher

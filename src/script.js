@@ -60,6 +60,12 @@ copyRateButton.addEventListener("click", function () {
   copyToClipboard("rate");
 });
 
+const rateInput = document.getElementById("oRate");
+
+rateInput.addEventListener("wheel", function (event) {
+  event.preventDefault();
+});
+
 /*const findButton = document.getElementById("find");
 findButton.addEventListener("click", function () {
   findNewTotal();

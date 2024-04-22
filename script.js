@@ -14,21 +14,21 @@ function findNewTotal() {
   } else {
     document.getElementById("oRate-error").textContent = "";
   }
-  totalF = oRate + (oRate * 5.75) / 100;
-  let roundedTotal = roundUp(totalF);
+  //totalF = oRate + (oRate * 5.75) / 100;
+  // let roundedTotal = roundUp(totalF);
 
-  rate = (oRate * (100 + 5.75)) / (100 + 12.63);
-  let roundedRate = roundUp(rate);
+  rate = oRate / (1 + 0.126314);
+  let roundedRate = rate.toFixed(2);
 
   document.getElementById("rate").value = roundedRate;
-  document.getElementById("eTotal").value = roundedTotal;
+  //document.getElementById("eTotal").value = roundedTotal;
 }
 
 function roundUp(value) {
   const roundedValue = Math.round(value * 100) / 100; // Round down to second decimal
 
   if (value - roundedValue >= 0.005) {
-    return roundedValue + 0.01; // Round up if the difference is 0.005 or higher
+    return roundedValue - 0.01; // Round up if the difference is 0.005 or //higher
   }
 
   return roundedValue;
@@ -40,7 +40,7 @@ function copyToClipboard(s) {
     rateField.select();
     rateField.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    document.getElementById("copyR-error").textContent = "Rate copied.";
+    document.getElementById("copy-error").textContent = "Rate copied.";
   }
   if (s == "eTotal") {
     const totalField = document.getElementById("eTotal");
@@ -50,10 +50,10 @@ function copyToClipboard(s) {
     document.getElementById("copy-error").textContent = "Total copied.";
   }
 }
-const copyEtotalButton = document.getElementById("copy-eTotal");
-copyEtotalButton.addEventListener("click", function () {
-  copyToClipboard("eTotal");
-});
+//const copyEtotalButton = document.getElementById("copy-eTotal");
+//copyEtotalButton.addEventListener("click", function () {
+// copyToClipboard("eTotal");
+//});
 
 const copyRateButton = document.getElementById("copy-rate");
 copyRateButton.addEventListener("click", function () {

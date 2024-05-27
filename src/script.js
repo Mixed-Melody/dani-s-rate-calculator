@@ -17,7 +17,7 @@ function findNewTotal() {
   //totalF = oRate + (oRate * 5.75) / 100;
   // let roundedTotal = roundUp(totalF);
 
-  rate = oRate / (1 + 0.126314);
+  rate = oRate + oRate * 0.05; // (1 + 0.126314);
   let roundedRate = rate.toFixed(2);
 
   document.getElementById("rate").value = roundedRate;

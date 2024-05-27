@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2024 Mixed-Melody (https://codepen.io/Mixed-Melody/pen/NWOPWoR)
+Copyright (c) 2024 Mixed-Melody (https://codepen.io/Mixed-Melody/pen/QWRGjNQ)
+Fork of an original work Dani's Rate calculator (https://codepen.io/Mixed-Melody/pen/QWRGjNQ)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

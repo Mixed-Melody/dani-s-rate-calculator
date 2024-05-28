@@ -80,11 +80,13 @@ input[type="button"]:hover {
   font-size: 12px;
   margin-left: 5px;
 }
+
 .output-field {
   margin: 10px auto;
   display: block;
   font-family: "Helvetica Neue", sans-serif;
 }
+
 button {
   padding: 10px 20px;
   border: none;
@@ -92,12 +94,23 @@ button {
   background-color: #f44336;
   color: #ffffff;
 }
+
 button:hover {
   background-color: #d32f2f;
 }
+
 .output-field button {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 input[type="text"] {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#days {
+  width: 3rem;
+}
+
+#rate {
+  width: 5rem;
 }

@@ -1,116 +1,31 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url("https://i.imgur.com/FDnzU8F.jpeg");
-  background-size: cover;
-  background-position: center;
-}
-
-.calculator {
-  background-color: #d3c9b8;
-  border-radius: 10px;
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-  margin: 2rem auto;
-  width: 25rem;
-}
-
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #00254c;
-}
-
-.form-group {
+  background-color: #f9f9f9;
+  font-family: sans-serif;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #00254c;
-}
-
-.input-group {
-  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-.currency-symbol {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-right: 1rem;
-  color: #00254c;
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-input[type="number"] {
-  padding: 0.5rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  width: 50%;
-  background-color: #fff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-input[type="button"] {
-  padding: 0.5rem 0.5rem;
-  background-color: #00254c;
+a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
   color: white;
-  border: none;
+  text-decoration: none;
   border-radius: 5px;
-  font-size: 1.2rem;
-  width: 100%;
-  align: center;
-  cursor: pointer;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s;
 }
 
-input[type="button"]:hover {
-  background-color: #053a88;
-}
-
-.error-message {
-  color: red;
-  font-size: 12px;
-  margin-left: 5px;
-}
-
-.output-field {
-  margin: 10px auto;
-  display: block;
-  font-family: "Helvetica Neue", sans-serif;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f44336;
-  color: #ffffff;
-}
-
-button:hover {
-  background-color: #d32f2f;
-}
-
-.output-field button {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-input[type="text"] {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-#days {
-  width: 3rem;
-}
-
-#rate {
-  width: 5rem;
+a:hover {
+  background-color: #45a049;
 }
